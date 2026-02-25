@@ -3,7 +3,7 @@
 #include <Adafruit_NeoPixel.h>
 
 // PIN on has connectat el cable de dades (DIN)
-#define PIN 2 
+#define PIN 13 
 
 // Configuració de la matriu:
 // 8 de llarg, 32 d'ample. Si el text surt del revés o en vertical, 
@@ -33,7 +33,7 @@ int pass = 0;
 void loop() {
   matrix.fillScreen(0);    // Esborra la pantalla
   matrix.setCursor(x, 0);
-  matrix.print(F("VA DEVELOPERS!!"));
+  matrix.print(F("VA SISTEMES!!"));
 
   // Moviment del text cap a l'esquerra
   if(--x < -90) { // El número -90 depèn de la llargada del text
