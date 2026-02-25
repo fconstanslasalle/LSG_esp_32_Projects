@@ -38,6 +38,7 @@ void handleUpdate() {
     missatge.toUpperCase(); // Opcional: tot en majúscules
     x = matrix.width();     // Reinicia la posició del text
     server.send(200, "text/plain", "Missatge rebut!");
+    Serial.println(missatge);
   } else {
     server.send(400, "text/plain", "Falta el paràmetre 'msg'");
   }
