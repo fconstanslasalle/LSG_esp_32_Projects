@@ -51,6 +51,10 @@ void setup() {
   matrix.setTextColor(colors[0]);
   x = matrix.width();
   // Connexió Wi-Fi
+  WiFi.disconnect(true); // Borra configuraciones previas
+  WiFi.mode(WIFI_OFF);    // Apaga el radio un momento
+  delay(1000);
+  WiFi.mode(WIFI_STA);    // Activa solo modo Estación
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
